@@ -1,9 +1,10 @@
 import ListService from "../Services/ListService.js";
+import STORE from "../store.js";
 
 //TODO Don't forget to render to the screen after every data change.
 function _drawLists() {
   let template = ""
-  STORE.State.lists.forEach(p => template += p.Template)
+  STORE.State.lists.forEach(l => template += l.Template)
   document.getElementById("listsHere").innerHTML = template
   STORE.saveState()
 }
@@ -21,7 +22,7 @@ export default class ListController {
     let newList = {
       title: form.title.value,
     }
-    ListsService.createList(newList)
+    ListService.createList(newList)
     form.reset()
     _drawLists()
   }

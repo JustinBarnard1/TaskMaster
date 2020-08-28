@@ -3,7 +3,7 @@ import List from "./Models/List.js";
 let _state = {
   /** @type {List[]} */
   lists: [
-    new List({ title: "test" })
+    new List({ title: "test", id: "1" })
   ]
 };
 
