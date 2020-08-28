@@ -26,18 +26,12 @@
           <div class="form-group text-center">
             <label for="title">Title</label>
             <input type="title" class="form" id="title" placeholder="New List...">
-            <div class="btn-group">
-              <button type="button" class="btn btn-light">Color</button>
-              <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                <span class="sr-only">Toggle Dropdown</span>
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item bg-green" href="#">Green</a>
-                <a class="dropdown-item bg-orange" href="#">Orange</a>
-                <a class="dropdown-item bg-blue" href="#">Blue</a>
-              </div>
-            </div>
+            <select class="custom-select" id="color">
+              <option selected>Colors</option>
+              <option class="bg-green" value="bg-green">Green</option>
+              <option class="bg-orange" value="bg-orange">Orange</option>
+              <option class="bg-blue" value="bg-blue">Blue</option>
+            </select>
             <button type="submit" class="btn btn-primary">Add List</button>
           </div>
         </form>

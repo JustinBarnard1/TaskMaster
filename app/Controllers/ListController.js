@@ -18,9 +18,11 @@ export default class ListController {
 
   createList(event) {
     event.preventDefault();
+    debugger
     let form = event.target
     let newList = {
       title: form.title.value,
+      color: form.color.value,
     }
     ListService.createList(newList)
     form.reset()

@@ -13,7 +13,7 @@ export default class List {
 
   get Template() {
     return `<div class="col-3 d-flex justify-content-center flex-wrap p-3" >
-          <div class="card m-2" style="width: 20vw;">
+          <div class="card m-2">
             <div class="card card-title ${this.color}">
               <h2 >${this.title}</h2>
           <a href="#" class="card-link text-danger d-flex justify-content-end"
