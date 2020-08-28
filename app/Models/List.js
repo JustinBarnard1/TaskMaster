@@ -26,7 +26,7 @@ export default class List {
               </div>
               <button type="submit" class="btn btn-primary">Add Bullet</button>
             </form>
-            <div id="bullet" class="card card-text">
+            <div id="bullet" class="">
               <ul>${this.BulletTemplate}</ul>
             </div>
           </div>
@@ -36,7 +36,7 @@ export default class List {
   get BulletTemplate() {
     let template = ""
     this.bullet.forEach(b => {
-      template += `<li class="p-1 bg-primary text-light card my-1">${b}</li><a href="#" onclick="app.listController.removeBullet('${this.id}', '${b}')" class="card-link">Delete</a>`
+      template += `<li class="p-1 my-1 d-flex justify-content-between">${b} <a href="#" onclick="app.listController.removeBullet('${this.id}', '${b}')" class="card-link">Delete</a></li>`
     })
     return template
   }
