@@ -1,0 +1,18 @@
+body { 
+  min-height: 100vh;
+  display: flex; 
+  flex-direction: column; 
+}
+
+header{ 
+  min-height: 6vh;
+} 
+
+main {
+  flex-grow: 1;
+  position: relative;
+} 
+
+footer {
+  min-height: 4vh;
+ }
