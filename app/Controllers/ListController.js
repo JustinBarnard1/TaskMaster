@@ -32,6 +32,20 @@ export default class ListController {
     _drawLists()
   }
 
+  addBullet(event, id) {
+    event.preventDefault()
+    let form = event.target
+    let newBullet = form.bullet.value
+    ListService.createBullet(newBullet, id)
+    form.reset()
+    _drawLists()
+  }
+
+  removeBullet(id, bullet) {
+    ListService.removeBullet(id, bullet)
+    _drawLists()
+  }
+
 
   //TODO: Your app will need the ability to create, and delete both lists and listItems
 }

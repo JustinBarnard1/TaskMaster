@@ -22,6 +22,17 @@ class ListService {
     STORE.State.lists.splice(listIndex, 1)
   }
 
+  createBullet(newBullet, id) {
+    let list = STORE.State.lists.find(l => l.id == id)
+    list.bullet.push(newBullet)
+  }
+
+  removeBullet(id, bullet) {
+    let list = STORE.State.lists.find(l => l.id == id)
+    let bulletIndex = list.bullet.findIndex(b => b == bullet)
+    list.bullet.splice(bulletIndex, 1)
+  }
+
 
 
 
