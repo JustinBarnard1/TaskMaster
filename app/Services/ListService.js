@@ -14,12 +14,12 @@ class ListService {
   }
 
   deleteList(id) {
-    let listIndex = STORE.State.list.findIndex(l => l.id == id)
-    if (postIndex === -1) {
+    let listIndex = STORE.State.lists.findIndex(l => l.id == id)
+    if (listIndex === -1) {
       console.error("invalid id")
       return
     }
-    STORE.State.list.splice(listIndex, 1)
+    STORE.State.lists.splice(listIndex, 1)
   }
 
 
