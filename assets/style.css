@@ -16,3 +16,20 @@ main {
 footer {
   min-height: 4vh;
  }
+
+ #listsHere{
+     min-width: 40vh;
+     min-height: 40vh;
+ }
+
+ .bg-green{
+     background-color: rgb(61, 202, 61);
+ }
+
+ .bg-blue{
+     background-color: rgb(2, 123, 204);
+ }
+
+ .bg-orange{
+     background-color: rgb(248, 170, 26);
+ }
