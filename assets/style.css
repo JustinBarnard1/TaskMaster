@@ -17,11 +17,6 @@ footer {
   min-height: 4vh;
  }
 
- #listsHere{
-     width: 60vw;
-     height: 40vh;
- }
-
  .bg-green{
      background-color: rgb(61, 202, 61);
  }

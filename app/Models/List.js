@@ -12,22 +12,22 @@ export default class List {
   //For starting out, your tasks may be strings alone, but later you may wish to turn them into full objects, that will be up to you
 
   get Template() {
-    return `<div class="col-3 d-flex justify-content-center flex-wrap p-3" >
+    return `<div class="col-4 d-flex justify-content-center p-3" >
           <div class="card m-2">
             <div class="card card-title ${this.color}">
               <h2 >${this.title}</h2>
           <a href="#" class="card-link text-danger d-flex justify-content-end"
                   onclick="app.listController.deleteList('${this.id}')">Delete</a>
             </div>
-            <form onsubmit="app.listController.addBullet(event, '${this.id}')">
-              <div class="form-group">
-                <input type="bullet" class="form" id="bullet" placeholder="New Bullet">
-                <button type="submit" class="btn btn-primary">Add</button>
-              </div>
-            </form>
             <div id="bullet" class="">
               <ul>${this.BulletTemplate}</ul>
             </div>
+            <form class="" style="" onsubmit="app.listController.addBullet(event, '${this.id}')">
+              <div class="">
+                <input type="bullet" class="form" id="bullet" placeholder="New Bullet">
+                <button type="submit" class="form-inline btn btn-primary">Add</button>
+              </div>
+            </form>
           </div>
         </div>`
   }
