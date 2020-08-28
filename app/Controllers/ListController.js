@@ -18,7 +18,6 @@ export default class ListController {
 
   createList(event) {
     event.preventDefault();
-    debugger
     let form = event.target
     let newList = {
       title: form.title.value,
@@ -30,7 +29,9 @@ export default class ListController {
   }
 
   deleteList(id) {
-    ListService.deleteList(id)
+    if (window.confirm("Are You Sure You Want To Delete?")) {
+      ListService.deleteList(id)
+    }
     _drawLists()
   }
 
@@ -44,7 +45,9 @@ export default class ListController {
   }
 
   removeBullet(id, bullet) {
-    ListService.removeBullet(id, bullet)
+    if (window.confirm("Are You Sure You Want To Delete?")) {
+      ListService.removeBullet(id, bullet)
+    }
     _drawLists()
   }
 
